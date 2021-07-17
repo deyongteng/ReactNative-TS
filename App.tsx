@@ -14,7 +14,7 @@ import { ThemeProvider } from 'styled-components';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import RootScene from './src/scene/RootScene';
 import { Themes } from './src/styles/theme';
-// 
+
 const App = () => {
    return (
 	//    <Provider store>
