@@ -7,6 +7,12 @@ const Square = styled.Image<{ size: number, rotate?: number }>`
     ${(props) => props.rotate ? `transform: rotate(${props.rotate}deg)` : undefined};
 `;
 
+const Icon = styled.Image<{size: number}>`
+    width: ${(props) => `${props.size}px`};
+    height: ${(props) => `${props.size}px`};
+`
 export default {
     Square,
+    Icon
 };
+

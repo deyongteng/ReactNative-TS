@@ -8,7 +8,7 @@ type contextType = {
 const HomeTabStateContext = createContext<contextType | undefined>(undefined);
 
 const HomeTabProvider = ({ children }: { children: React.ReactNode }) => {
-    const [visible, setVisible] = useState(true); // Tab是否顯示
+    const [visible, setVisible] = useState(true);
     const toggleVisible = () => setVisible(c => !c);
     return (
         <HomeTabStateContext.Provider value={{ visible, toggleVisible }}>
