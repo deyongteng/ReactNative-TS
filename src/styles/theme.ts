@@ -26,6 +26,10 @@ declare module "styled-components" {
             HOME_BOTTOM_TAB_MINE_NORMAL: ImageSourcePropType; // 底部主選單-我的
             HOME_BOTTOM_TAB_MINE_ACTIVE: ImageSourcePropType;
             COMMON_ICON_CATEGORY: ImageSourcePropType;
+            BANNER_IMG1: ImageSourcePropType;
+            BANNER_IMG2: ImageSourcePropType;
+            BANNER_IMG3: ImageSourcePropType;
+            BANNER_IMG4: ImageSourcePropType;
         }
     }
 }
@@ -53,6 +57,10 @@ const LightTheme: DefaultTheme = {
         HOME_BOTTOM_TAB_MINE_NORMAL: require('../assets/img/icon/home_tab/mine.png'),
         HOME_BOTTOM_TAB_MINE_ACTIVE: require('../assets/img/icon/home_tab/mine_active.png'),
         COMMON_ICON_CATEGORY: require('../assets/img/icon/common/icon_category.png'),
+        BANNER_IMG1: require('../assets/img/banner/banner1.jpeg'),
+        BANNER_IMG2: require('../assets/img/banner/banner2.jpeg'),
+        BANNER_IMG3: require('../assets/img/banner/banner3.jpeg'),
+        BANNER_IMG4: require('../assets/img/banner/banner4.jpeg'),
     }
 }
 
