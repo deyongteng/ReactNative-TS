@@ -20,6 +20,7 @@ declare module "styled-components" {
             LINE_END_COLOR: string;
             TEXTINPUT_BG: string;
             HOME_SCROLL_VIEW: string;
+            BORDER_COLOR: string;
         },
         IMAGES: {
             HOME_BOTTOM_TAB_LOBBY_NORMAL: ImageSourcePropType; // 底部主選單-首頁
@@ -50,6 +51,25 @@ declare module "styled-components" {
             NAVS_TMXP: ImageSourcePropType;
             NAVS_XY: ImageSourcePropType;
             NAVS_ZDXH: ImageSourcePropType;
+            COMPREHENSIVE_JHS_TITLE: ImageSourcePropType;
+            COMPREHENSIVE_TBZB_TITLE:ImageSourcePropType;
+            COMPREHENSIVE_TGQG_TITLE:ImageSourcePropType;
+            COMPREHENSIVE_TTTM_TITLE:ImageSourcePropType;
+            COMPREHENSIVE_YHH_TITLE: ImageSourcePropType;
+            COMPREHENSIVE_MRHD_TITLE:ImageSourcePropType;
+            COMPREHENSIVE_WWSP_TITLE:ImageSourcePropType;
+            COMPREHENSIVE_SB: ImageSourcePropType;
+            COMPREHENSIVE_LD: ImageSourcePropType;
+            COMPREHENSIVE_SL: ImageSourcePropType;
+            COMPREHENSIVE_WJC: ImageSourcePropType
+            COMPREHENSIVE_XZ: ImageSourcePropType;
+            COMPREHENSIVE_DL: ImageSourcePropType;
+            COMPREHENSIVE_QZ: ImageSourcePropType;
+            COMPREHENSIVE_DSJ: ImageSourcePropType;
+            COMPREHENSIVE_BOOK: ImageSourcePropType;
+            COMPREHENSIVE_RD: ImageSourcePropType;
+            COMPREHENSIVE_HZP: ImageSourcePropType;
+            COMPREHENSIVE_LDX: ImageSourcePropType;
         }
     }
 }
@@ -70,7 +90,8 @@ const LightTheme: DefaultTheme = {
         LINE_START_COLOR: '#FF8F0D',
         LINE_END_COLOR: '#FF5114',
         TEXTINPUT_BG: 'rgb(255, 255, 255)',
-        HOME_SCROLL_VIEW: "#f4f4f4"
+        HOME_SCROLL_VIEW: "#f4f4f4",
+        BORDER_COLOR: 'rgb(238, 238, 238)'
     },
     IMAGES: {
         HOME_BOTTOM_TAB_LOBBY_NORMAL: require('../assets/img/icon/home_tab/lobby.png'),
@@ -101,6 +122,25 @@ const LightTheme: DefaultTheme = {
         NAVS_TMXP: require('../assets/img/navs/tmxp.png'),
         NAVS_XY: require('../assets/img/navs/xy.png'),
         NAVS_ZDXH: require('../assets/img/navs/zdxh.png'),
+        COMPREHENSIVE_JHS_TITLE: require('../assets/img/comprehensive/jhs_title.png'),
+        COMPREHENSIVE_TBZB_TITLE: require('../assets/img/comprehensive/tbzb_title.png'),
+        COMPREHENSIVE_TGQG_TITLE: require('../assets/img/comprehensive/tbqg_title.png'),
+        COMPREHENSIVE_TTTM_TITLE: require('../assets/img/comprehensive/tttm_title.png'),
+        COMPREHENSIVE_YHH_TITLE: require('../assets/img/comprehensive/yhh_title.png'),
+        COMPREHENSIVE_MRHD_TITLE: require('../assets/img/comprehensive/mrhd_title.png'),
+        COMPREHENSIVE_WWSP_TITLE: require('../assets/img/comprehensive/wwsp_title.png'),
+        COMPREHENSIVE_SB: require('../assets/img/comprehensive/sb.png'),
+        COMPREHENSIVE_LD: require('../assets/img/comprehensive/ld.png'),
+        COMPREHENSIVE_SL: require('../assets/img/comprehensive/sl.png'),
+        COMPREHENSIVE_WJC: require('../assets/img/comprehensive/wjc.png'),
+        COMPREHENSIVE_XZ: require('../assets/img/comprehensive/xz.png'),
+        COMPREHENSIVE_DL: require('../assets/img/comprehensive/dl.png'),
+        COMPREHENSIVE_QZ: require('../assets/img/comprehensive/qz.png'),
+        COMPREHENSIVE_DSJ: require('../assets/img/comprehensive/dsj.png'),
+        COMPREHENSIVE_BOOK: require('../assets/img/comprehensive/book.png'),
+        COMPREHENSIVE_RD: require('../assets/img/comprehensive/rd.png'),
+        COMPREHENSIVE_HZP: require('../assets/img/comprehensive/hzp.png'),
+        COMPREHENSIVE_LDX: require('../assets/img/comprehensive/ldx.png'),
     }
 }
 

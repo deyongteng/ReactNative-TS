@@ -24,6 +24,16 @@ interface NavProps {
     name: string;
 }
 
+interface Commodity {
+    image: ImageSourcePropType;
+    level1TitleImage?: ImageSourcePropType;
+    title: string;
+}
+
+interface ComprehensiveProps {
+    list: Commodity[];
+}
+
 const formantNavsData =(data: NavProps[])=> {
     let list: NavProps[][] = [];
     let navItemList: NavProps[] = [];
@@ -73,6 +83,29 @@ const LobbyScene =()=> {
         {id: 18, name: '土货鲜食', image: themeContext.IMAGES.NAVS_THXS},
     ];
 
+    const comprehensives: ComprehensiveProps[] = [
+        {
+            list: [
+                {title: "品牌折扣", level1TitleImage: themeContext.IMAGES.COMPREHENSIVE_JHS_TITLE, image: themeContext.IMAGES.COMPREHENSIVE_SB},
+                {title: "划算好货", level1TitleImage: undefined, image: themeContext.IMAGES.COMPREHENSIVE_LD},
+                {title: "限时半价", level1TitleImage: themeContext.IMAGES.COMPREHENSIVE_TGQG_TITLE, image: themeContext.IMAGES.COMPREHENSIVE_XZ},
+                {title: "9.9包邮", level1TitleImage: themeContext.IMAGES.COMPREHENSIVE_TTTM_TITLE, image: themeContext.IMAGES.COMPREHENSIVE_DL},
+                {title: "挖深藏店", level1TitleImage: themeContext.IMAGES.COMPREHENSIVE_MRHD_TITLE, image: themeContext.IMAGES.COMPREHENSIVE_BOOK},
+                {title: "", level1TitleImage: undefined, image: themeContext.IMAGES.COMPREHENSIVE_RD},
+            ]
+        },
+        {
+            list: [
+                {title: "好物传送门", level1TitleImage: themeContext.IMAGES.COMPREHENSIVE_TBZB_TITLE, image: themeContext.IMAGES.COMPREHENSIVE_SL},
+                {title: "", level1TitleImage: undefined, image: themeContext.IMAGES.COMPREHENSIVE_WJC},
+                {title: "全民口碑推荐", level1TitleImage: themeContext.IMAGES.COMPREHENSIVE_YHH_TITLE, image: themeContext.IMAGES.COMPREHENSIVE_QZ},
+                {title: "", level1TitleImage: undefined, image: themeContext.IMAGES.COMPREHENSIVE_DSJ},
+                {title: "粉丝都爱", level1TitleImage: themeContext.IMAGES.COMPREHENSIVE_WWSP_TITLE, image: themeContext.IMAGES.COMPREHENSIVE_HZP},
+                {title: "", level1TitleImage: undefined, image: themeContext.IMAGES.COMPREHENSIVE_LDX},
+            ]
+        }
+    ]
+    console.log(comprehensives)
     // 加载banner图
     const renderPage = (data: BannerProps)=> {
         const { id, image } = data;
@@ -117,7 +150,11 @@ const LobbyScene =()=> {
                 </View>
                 {/* 市场区域 */}
                 <View style={styles.MarketContent}>
-                    <Text style={{fontSize: 20}}>商品区域待开发</Text>
+                   {comprehensives.map((item, index)=>(
+                        <View key={index} style={{borderRightColor: themeContext.COLORS.BORDER_COLOR, borderRightWidth: index === 0? 1 : undefined, flex: 1}}>
+
+                        </View>))
+                   }
                 </View>
             </ScrollView>
         </CommonStyles.View.SafeArea>
@@ -137,10 +174,8 @@ const styles = StyleSheet.create({
         marginLeft: wp('2.5%'),
         marginRight: wp('2.5%'),
         marginTop: 10,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-    }
+        flexDirection: 'row'
+    },
   });
 
 
