@@ -6,6 +6,7 @@ declare module "styled-components" {
         // 所有顏色
         COLORS: {
             THEME_MAIN_1: string; 
+            THEME_FONT_COLOR: string;
             COMPONENT_BG: string;
             BORDER_COMMON: string;
             TEXT_DISABLED: string;
@@ -21,6 +22,7 @@ declare module "styled-components" {
             TEXTINPUT_BG: string;
             HOME_SCROLL_VIEW: string;
             BORDER_COLOR: string;
+            MARKET_TITLE_COLOR: string;
         },
         IMAGES: {
             HOME_BOTTOM_TAB_LOBBY_NORMAL: ImageSourcePropType; // 底部主選單-首頁
@@ -77,6 +79,7 @@ declare module "styled-components" {
 const LightTheme: DefaultTheme = {
     COLORS: {
         THEME_MAIN_1: 'rgb(248, 86, 91)',
+        THEME_FONT_COLOR: 'rgb(102, 102, 102)',
         COMPONENT_BG: 'rgb(255, 255, 255)',
         BORDER_COMMON: 'rgb(192, 192, 192)',
         TEXT_DISABLED: 'rgb(202, 198, 202)',
@@ -91,7 +94,8 @@ const LightTheme: DefaultTheme = {
         LINE_END_COLOR: '#FF5114',
         TEXTINPUT_BG: 'rgb(255, 255, 255)',
         HOME_SCROLL_VIEW: "#f4f4f4",
-        BORDER_COLOR: 'rgb(238, 238, 238)'
+        BORDER_COLOR: 'rgb(238, 238, 238)',
+        MARKET_TITLE_COLOR: 'rgb(0, 0, 25)',
     },
     IMAGES: {
         HOME_BOTTOM_TAB_LOBBY_NORMAL: require('../assets/img/icon/home_tab/lobby.png'),

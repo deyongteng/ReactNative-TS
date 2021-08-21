@@ -38,7 +38,7 @@ const Navs =(props: {navs: any[]})=>{
                 style={{width: 61, height: 67, marginTop: index === 1? 20 : 3}}
             >
                 <CommonStyles.Image.Square size={61} source={image} />
-                <Text style={{textAlign: 'center', fontSize: 12, marginTop: 4}}>{name}</Text>
+                <Text style={{textAlign: 'center', fontSize: 12, marginTop: 4, color: themeContext.COLORS.THEME_FONT_COLOR}}>{name}</Text>
             </View>
         )
     }

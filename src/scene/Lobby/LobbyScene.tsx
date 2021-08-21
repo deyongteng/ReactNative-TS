@@ -8,6 +8,7 @@ import { ThemeContext } from 'styled-components';
 import LinearGradient from 'react-native-linear-gradient';
 import Carousel from 'react-native-banner-carousel';
 import Navs from './Navs';
+import Market from './MarketItem';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp, heightPercentageToDP} from 'react-native-responsive-screen';
 
 const Width = Dimensions.get('window').width;
@@ -26,7 +27,7 @@ interface NavProps {
 
 interface Commodity {
     image: ImageSourcePropType;
-    level1TitleImage?: ImageSourcePropType;
+    level1Title?: string;
     title: string;
 }
 
@@ -86,22 +87,22 @@ const LobbyScene =()=> {
     const comprehensives: ComprehensiveProps[] = [
         {
             list: [
-                {title: "品牌折扣", level1TitleImage: themeContext.IMAGES.COMPREHENSIVE_JHS_TITLE, image: themeContext.IMAGES.COMPREHENSIVE_SB},
-                {title: "划算好货", level1TitleImage: undefined, image: themeContext.IMAGES.COMPREHENSIVE_LD},
-                {title: "限时半价", level1TitleImage: themeContext.IMAGES.COMPREHENSIVE_TGQG_TITLE, image: themeContext.IMAGES.COMPREHENSIVE_XZ},
-                {title: "9.9包邮", level1TitleImage: themeContext.IMAGES.COMPREHENSIVE_TTTM_TITLE, image: themeContext.IMAGES.COMPREHENSIVE_DL},
-                {title: "挖深藏店", level1TitleImage: themeContext.IMAGES.COMPREHENSIVE_MRHD_TITLE, image: themeContext.IMAGES.COMPREHENSIVE_BOOK},
-                {title: "", level1TitleImage: undefined, image: themeContext.IMAGES.COMPREHENSIVE_RD},
+                {title: "品牌折扣", level1Title: "聚划算", image: themeContext.IMAGES.COMPREHENSIVE_SB},
+                {title: "划算好货", level1Title: undefined, image: themeContext.IMAGES.COMPREHENSIVE_LD},
+                {title: "限时半价", level1Title: "淘抢购", image: themeContext.IMAGES.COMPREHENSIVE_XZ},
+                {title: "9.9包邮", level1Title: "天天特卖", image: themeContext.IMAGES.COMPREHENSIVE_DL},
+                {title: "挖深藏店", level1Title: "每日好店", image: themeContext.IMAGES.COMPREHENSIVE_BOOK},
+                {title: "", level1Title: undefined, image: themeContext.IMAGES.COMPREHENSIVE_RD},
             ]
         },
         {
             list: [
-                {title: "好物传送门", level1TitleImage: themeContext.IMAGES.COMPREHENSIVE_TBZB_TITLE, image: themeContext.IMAGES.COMPREHENSIVE_SL},
-                {title: "", level1TitleImage: undefined, image: themeContext.IMAGES.COMPREHENSIVE_WJC},
-                {title: "全民口碑推荐", level1TitleImage: themeContext.IMAGES.COMPREHENSIVE_YHH_TITLE, image: themeContext.IMAGES.COMPREHENSIVE_QZ},
-                {title: "", level1TitleImage: undefined, image: themeContext.IMAGES.COMPREHENSIVE_DSJ},
-                {title: "粉丝都爱", level1TitleImage: themeContext.IMAGES.COMPREHENSIVE_WWSP_TITLE, image: themeContext.IMAGES.COMPREHENSIVE_HZP},
-                {title: "", level1TitleImage: undefined, image: themeContext.IMAGES.COMPREHENSIVE_LDX},
+                {title: "好物传送门", level1Title: "淘宝直播", image: themeContext.IMAGES.COMPREHENSIVE_SL},
+                {title: "", level1Title: undefined, image: themeContext.IMAGES.COMPREHENSIVE_WJC},
+                {title: "全民口碑推荐", level1Title: "有好物", image: themeContext.IMAGES.COMPREHENSIVE_QZ},
+                {title: "", level1Title: undefined, image: themeContext.IMAGES.COMPREHENSIVE_DSJ},
+                {title: "粉丝都爱", level1Title: "哇哦视频", image: themeContext.IMAGES.COMPREHENSIVE_HZP},
+                {title: "", level1Title: undefined, image: themeContext.IMAGES.COMPREHENSIVE_LDX},
             ]
         }
     ]
@@ -151,8 +152,12 @@ const LobbyScene =()=> {
                 {/* 市场区域 */}
                 <View style={styles.MarketContent}>
                    {comprehensives.map((item, index)=>(
-                        <View key={index} style={{borderRightColor: themeContext.COLORS.BORDER_COLOR, borderRightWidth: index === 0? 1 : undefined, flex: 1}}>
-
+                        <View key={index} style={{borderRightColor: themeContext.COLORS.BORDER_COLOR, borderRightWidth: index === 0? 1 : undefined, flex: 1, paddingLeft: 10, paddingRight: 10, borderRadius: 12, overflow: 'hidden', flexDirection: 'row', flexWrap: 'wrap'}}>
+                            {
+                                item.list.map((market, index)=>(
+                                    <Market data={market} key={index}/>
+                                ))
+                            }
                         </View>))
                    }
                 </View>
